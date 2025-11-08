@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #8b5cf6;
-  --color-secondary: #6366f1;
-  --color-accent: #ec4899;
-  --color-background: #0a0a0a;
-  --color-surface: #1a1a1a;
-  --color-text: #f0f0f0;
-  --color-text-secondary: #a0a0a0;
+  --color-primary: #ff5a7a;
+  --color-secondary: #00e6d8;
+  --color-accent: #ff5a7a;
+  --color-background: #000000;
+  --color-surface: #000000;
+  --color-text: #ffffff;
+  --color-text-secondary: #888888;
   --color-border: #333333;
 }
 
@@ -24,5 +24,57 @@
 
   #root {
     @apply w-screen h-screen;
+  }
+}
+
+@layer utilities {
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .link-item {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .link-item:hover {
+    transform: translateX(8px);
+    color: var(--color-primary);
+  }
+
+  .link-item::after {
+    content: '→';
+    position: absolute;
+    right: -24px;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .link-item:hover::after {
+    opacity: 1;
+    right: -32px;
+  }
+
+  .neon-glow {
+    transition: all 0.3s ease;
+  }
+
+  .neon-glow:hover {
+    box-shadow: 0 0 20px rgba(255, 90, 122, 0.4);
+  }
+
+  .neon-text:hover {
+    text-shadow: 0 0 20px rgba(255, 90, 122, 0.6);
   }
 }
