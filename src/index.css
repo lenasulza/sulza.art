@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #8b5cf6;
+  --color-secondary: #6366f1;
+  --color-accent: #ec4899;
+  --color-background: #0a0a0a;
+  --color-surface: #1a1a1a;
+  --color-text: #f0f0f0;
+  --color-text-secondary: #a0a0a0;
+  --color-border: #333333;
+}
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-text overflow-hidden;
+  }
+
+  #root {
+    @apply w-screen h-screen;
+  }
+}
