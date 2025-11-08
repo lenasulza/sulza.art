@@ -2,11 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   const links = [
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/lena-sulza' },
-    { name: 'Behance', url: '#' },
-    { name: 'YouTube', url: '#' },
-    { name: 'Press Kit', url: '#' },
-    { name: 'Contact', url: 'mailto:hello@lenasulza.com' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/alena-sulza-b887b292/' },
     { name: 'Gomoku Game', url: '/gomoku', internal: true }
   ];
 
